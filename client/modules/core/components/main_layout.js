@@ -4,7 +4,8 @@ import Navigation from './navigation';
 const Layout = ({content = () => null }) => (
   <div>
     <header>
-    <h1>Mantra Voice</h1>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no" />
+    <h1>Angel</h1>
     <Navigation />
     </header>
 

@@ -20,5 +20,7 @@ reactive-dict
 audit-argument-checks
 check
 random
-standard-minifier-css
 standard-minifier-js
+semantic:ui
+juliancwirko:postcss
+less

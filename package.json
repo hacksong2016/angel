@@ -27,14 +27,25 @@
     "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.0.0",
     "sinon": "1.17.x",
-    "style-loader": "^0.13.1"
+    "style-loader": "^0.13.1",
+    "autoprefixer": "^6.3.1"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "domready": "^1.0.8",
     "mantra-core": "^1.7.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-mounter": "^1.2.0"
   },
-  "private": true
+  "private": true,
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }
+  }
 }

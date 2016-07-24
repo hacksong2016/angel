@@ -21,3 +21,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 semantic:ui
 less
 juliancwirko:postcss
+kadira:flow-router
+kadira:blaze-layout

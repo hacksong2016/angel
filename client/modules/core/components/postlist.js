@@ -1,16 +1,15 @@
 import React from 'react';
 
-const PostList = ({posts}) => (
-  <div className='postlist'>
-    <ul>
+const PostList = ({ posts }) => (
+  <div className='postlist ui container'>
       {posts.map(post => (
-				<li className="ui divided items" key={post._id}>
-				  <div className="item">
+				<div className="ui divided items" key={post._id}>
+				  <a className="item" href={`/post/${post._id}`}>
 				    <div className="image">
 				      <img src={post.img} />
 				    </div>
 				    <div className="content">
-				      <a className="header">{post.title}</a>
+				      <span className="header">{post.title}</span>
 				      <div className="meta">
 				        <span className="cinema">{post.amount}</span>
 				      </div>
@@ -19,12 +18,12 @@ const PostList = ({posts}) => (
 				      </div>
 				      <div className="extra">
 				        <div className="ui label">{post.type}</div>
+				        <div className="ui right floated primary button">参与<i className="right chevron icon"></i> </div>
 				      </div>
 				    </div>
+				  </a>
 				  </div>
-				  </li>
       ))}
-    </ul>
   </div>
 );
 

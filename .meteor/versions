@@ -1,5 +1,5 @@
 allow-deny@1.0.5
-audit-argument-checks@1.0.7
+autopublish@1.0.7
 autoupdate@1.2.11
 babel-compiler@6.8.5
 babel-runtime@0.1.9_1
@@ -30,11 +30,9 @@ html-tools@1.0.10
 htmljs@1.0.10
 http@1.1.8
 id-map@1.0.8
+insecure@1.0.7
 jquery@1.11.9
-juliancwirko:postcss@1.1.1
-kadira:flow-router@2.12.1
 launch-screen@1.0.12
-less@2.6.5
 livedata@1.0.18
 logging@1.0.14
 meteor@1.1.16
@@ -53,16 +51,13 @@ observe-sequence@1.0.12
 ordered-dict@1.0.8
 promise@0.7.3
 random@1.0.10
-reactive-dict@1.1.8
 reactive-var@1.0.10
 reload@1.1.10
 retry@1.0.8
 routepolicy@1.0.11
-semantic:ui@2.2.1
-semantic:ui-data@2.2.1
-session@1.1.6
 spacebars@1.0.12
 spacebars-compiler@1.0.12
+standard-minifier-css@1.0.8
 standard-minifier-js@1.0.8
 templating@1.1.14
 templating-tools@1.0.4

@@ -11,7 +11,7 @@ const Navigation = () => (
   <a className="item" href="/money">
     现金援助
   </a>
-  <a className="item" href="/video">
+  <a className="item" href="/live">
     视频直播
   </a>
   <a className="item" href="/new-post">

@@ -4,6 +4,7 @@ import {mount} from 'react-mounter';
 import MainLayout from './components/main_layout';
 import PostList from './containers/postlist';
 import Post from './containers/post';
+import Live from './containers/live';
 import NewPost from './containers/newpost';
 
 export default function (injectDeps, {FlowRouter}) {
@@ -32,6 +33,15 @@ export default function (injectDeps, {FlowRouter}) {
     action() {
       mount(MainLayoutCtx, {
         content: () => (<NewPost/>)
+      });
+    }
+  });
+
+  FlowRouter.route('/live', {
+    name: 'live',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Live/>)
       });
     }
   });

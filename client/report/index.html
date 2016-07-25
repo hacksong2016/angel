@@ -1,7 +1,7 @@
 <template name="reportIndex">
   <div class="ui grid container">
     <div class="eight wide column">
-      <form class="ui form">
+      <form class="ui form" id="report-form">
         <h4 class="ui dividing header">接受捐助信息填写</h4>
         <div class="field">
           <label>接收单位名称</label>
@@ -37,24 +37,14 @@
     <div class="eight wide column">
       <h4 class="ui dividing header">接受捐助信息公告</h4>
       <div class="ui very relaxed list">
+        {{#each reports}}
         <div class="item">
           <div class="content">
-            <a class="header">Daniel Louise</a>
-            <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
+            <a class="header">{{username}}</a>
+            <div class="description">确认了接收了货号为{{number}}的<a><b>{{amount}}件</b></a>{{name}}</div>
           </div>
         </div>
-        <div class="item">
-          <div class="content">
-            <a class="header">Stevie Feliciano</a>
-            <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="content">
-            <a class="header">Elliot Fu</a>
-            <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
-          </div>
-        </div>
+        {{/each}}
       </div>
     </div>
   </div>

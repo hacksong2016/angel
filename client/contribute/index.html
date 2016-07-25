@@ -1,0 +1,34 @@
+<template name="contributeIndex">
+  <div class="ui grid container">
+    <div class="eight wide column">
+      <form class="ui form">
+        <h4 class="ui dividing header">捐助信息填写</h4>
+        <div class="field">
+          <label>捐助人</label>
+          <input type="text" name="accept-unit" id="accept-unit" placeholder="接收单位名称">
+        </div>
+        <div class="field">
+          <label>取货地址</label>
+          <input type="text" name="accept-address" id="accept-address" placeholder="接收单位地址">
+        </div>
+        <div class="field">
+          <label>物资名称</label>
+          <input type="text" name="accept-name" id="accept-name" placeholder="接收物资名称">
+        </div>
+        <div class="field">
+          <label>物资数量</label>
+          <input type="number" name="accept-amount" id="accept-amount" placeholder="物资数量">
+        </div>
+        <div class="field">
+          <label>捐助时间</label>
+          <input type="date" name="accept-time" id="accept-time" placeholder="接受捐助时间">
+        </div>
+        <div class="field">
+          <label>捐助详情</label>
+          <textarea id="accept-detail"></textarea>
+        </div>
+        <button class="ui primary button" type="submit">提交</button>
+      </form>
+    </div>
+  </div>
+</template>

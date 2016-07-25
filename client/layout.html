@@ -1,3 +1,8 @@
 <template name="mainLayout">
-	 {{> Template.dynamic template=main}}
+  <div class="ui container">
+    {{>navbar}} 
+  </div>
+  <div class="ui page" style="min-height:800px;">
+  	{{> Template.dynamic template=main}}
+  </div>
 </template>

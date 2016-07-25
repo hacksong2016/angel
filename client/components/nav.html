@@ -1,0 +1,20 @@
+<template name="navbar">
+  <h1>Angel</h1>
+  <div class="ui secondary menu stackable">
+    <a class="item" href="/">首页</a>
+    <a class="item" href="/crowd-funding">募集</a>
+    <a class="item" href="/live">直播</a>
+    <a class="item" href="/report">捐助报告</a>
+    <a class="item" href="/market">爱心集市</a>
+    <a class="item" href="/contribute">我要捐助</a>
+    <a class="item" href="/start-funding">发起募集</a>
+    <div class="right menu">
+      {{#if currentUser}}
+        <a class="item" href="/profile">{{currentUser.username}}</a>
+        <a class="ui positive button item"><i class="sign out icon"></i></a>
+      {{else}}
+        <a class="ui positive button item" href="/signin">登录</a>
+      {{/if}}
+    </div>
+  </div>
+</template>

@@ -1,0 +1,27 @@
+<template name="crowdfundingDetail">
+  <div class="ui container found">
+    <div class="found-bg" style="background-image:url({{found.img}})"></div>
+    <div class="content">
+      <h1 class="ui header">{{found.title}}</h1>
+      <p>{{found.detail}}</p>
+      <p>开始日期：{{found.startTime}} － 结束日期：{{found.endTime}}</p>
+      <p>进度：{{found.in}}/{{found.amount}}</p>
+    </div>
+  </div>
+  <div class="ui grid container">
+    <div class="eight wide column">
+      <form class="ui form" id="donate-form">
+        <h4 class="ui dividing header">捐助物资信息</h4>
+        <div class="field">
+          <label>物资名称</label>
+          <input type="text" name="f-name" id="d-name" placeholder="物资名称">
+        </div>
+        <div class="field">
+          <label>目标数量</label>
+          <input type="number" name="f-amount" id="d-amount" placeholder="数量">
+        </div>
+        <button class="ui primary button" type="submit">提交</button>
+      </form>
+    </div>
+  </div>
+</template>

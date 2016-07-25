@@ -1,0 +1,46 @@
+<template name="startFundingIndex">
+  <div class="ui grid container">
+    <div class="eight wide column">
+      <form class="ui form" id="start-founding">
+        <h4 class="ui dividing header">募集信息</h4>
+        <div class="field">
+          <label>标题</label>
+          <input type="text" name="f-title" id="f-title" placeholder="接收单位名称">
+        </div>
+        <div class="field">
+          <label>接收单位地址</label>
+          <input type="text" name="f-address" id="f-address" placeholder="接收单位地址">
+        </div>
+        <div class="field">
+          <label>物资名称</label>
+          <input type="text" name="f-name" id="f-name" placeholder="物资名称">
+        </div>
+        <div class="field">
+          <label>目标数量</label>
+          <input type="number" name="f-amount" id="f-amount" placeholder="目标数量">
+        </div>
+        <div class="field">
+          <label>发起时间</label>
+          <input type="date" name="f-time" id="start-time" placeholder="发起时间">
+        </div>
+        <div class="field">
+          <label>结束时间</label>
+          <input type="date" name="f-time" id="end-time" placeholder="结束时间">
+        </div>
+        <div class="field">
+          <label>捐助详情</label>
+          <textarea id="f-detail"></textarea>
+        </div>
+        <div class="field">
+          <label>标签</label>
+ 			<input type="text" name="f-tags" id="f-tags" placeholder="标签,请用半价逗号隔开">
+        </div>
+        <div class="field">
+          <label>图片详情</label>
+          <input type="text" name="f-img" id="f-img" placeholder="图片详情">
+        </div>
+        <button class="ui primary button" type="submit">提交</button>
+      </form>
+    </div>
+  </div>
+</template>

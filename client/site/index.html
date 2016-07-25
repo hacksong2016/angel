@@ -1,3 +1,152 @@
 <template name="siteIndex">
-	index
+  <div class="ui grid container">
+    <div class="ten wide column">
+      <h3 class="ui header">
+  进行中的捐助
+  <div class="sub header">帮助孩子们完成小愿望</div>
+	</h3>
+    </div>
+    <div class="six wide column">
+      <h3 class="ui header">
+  捐助动态
+  <div class="sub header">让每一次捐助都能落实</div>
+	</h3>
+    </div>
+  </div>
+  <div class="ui grid container">
+    <div class="ten wide column">
+    {{#each founds}}
+      <div class="ui divided items">
+        <div class="item">
+          <div class="image">
+            <img src={{img}}>
+          </div>
+          <div class="content">
+            <a class="header">{{title}}</a>
+            <div class="meta">
+              <span class="cinema">{{startTime}} - {{endTime}} 完成度：{{percent in amount}}%</span>
+            </div>
+            <div class="description">
+              <p>{{detail}}
+              </p>
+            </div>
+            <div class="extra">
+              <a class="ui right floated primary button" href="/crowd-funding/{{_id}}">
+                参与
+                <i class="right chevron icon"></i>
+              </a>
+              {{#each tags}}
+              <div class="ui label">{{this}}</div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="six wide column">
+      <div class="ui items">
+        <div class="item">
+          <div class="ui small image">
+            <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
+          </div>
+          <div class="middle aligned content">
+            <div class="header">
+              Content A
+            </div>
+            <div class="description">
+              <p>sadfadsfasdf</p>
+            </div>
+            <div class="extra">
+              <div class="ui right floated button">
+                Action
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui container">
+    <h3 class="ui header">
+  爱心集市
+  <div class="sub header">用闲置物品，为孩子们加油</div>
+</h3>
+  </div>
+  <div class="ui container grid">
+    <div class="four wide column">
+      <div class="ui card ">
+        <div class="blurring dimmable image">
+          <div class="ui dimmer">
+            <div class="content">
+              <div class="center">
+                <div class="ui inverted button">购买</div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <a class="image" href="#">
+            <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
+          </a>
+          <div class="content">
+            <a class="header" href="#">Steve Jobes</a>
+            <div class="meta">
+              <a>Last Seen 2 days ago</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="four wide column">
+        <div class="ui card ">
+          <a class="image" href="#">
+            <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
+          </a>
+          <div class="content">
+            <a class="header" href="#">Steve Jobes</a>
+            <div class="meta">
+              <a>Last Seen 2 days ago</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="four wide column">
+        <div class="ui card ">
+          <a class="image" href="#">
+            <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
+          </a>
+          <div class="content">
+            <a class="header" href="#">Steve Jobes</a>
+            <div class="meta">
+              <a>Last Seen 2 days ago</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="four wide column">
+        <div class="ui card ">
+          <a class="image" href="#">
+            <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
+          </a>
+          <div class="content">
+            <a class="header" href="#">Steve Jobes</a>
+            <div class="meta">
+              <a>Last Seen 2 days ago</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="four wide column">
+        <div class="ui card ">
+          <a class="image" href="#">
+            <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
+          </a>
+          <div class="content">
+            <a class="header" href="#">Steve Jobes</a>
+            <div class="meta">
+              <a>Last Seen 2 days ago</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </template>

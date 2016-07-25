@@ -1,5 +1,8 @@
 Template.siteIndex.helpers({
-	founds:function (argument) {
+	founds:function () {
+		return Founding.find().fetch();
+	},
+	foundeds:function () {
 		return Founding.find().fetch();
 	},
 	percent:function (a,b) {

@@ -1,33 +1,37 @@
 <template name="crowdfundingIndex">
   <div class="ui grid container">
     <div class="ten wide column">
+      {{#each founds}}
       <div class="ui divided items">
         <div class="item">
           <div class="image">
-            <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
+            <img src={{img}}>
           </div>
           <div class="content">
-            <a class="header">My Neighbor Totoro</a>
+            <a class="header">{{title}}</a>
             <div class="meta">
-              <span class="cinema">IFC Cinema</span>
+              <span class="cinema">{{startTime}} - {{endTime}}</span>
             </div>
             <div class="description">
-              <p>asdfasdfasdfadsfasdfasdfasdfadsfasdfasdfasdfads fasdfasdfasdfadsfasdfasdfasdfadsfasdfasdfasdfadsfasdfasdfasdfadsf
+              <p>
+              {{detail}}
               </p>
             </div>
             <div class="extra">
-              <div class="ui right floated primary button">
+              <a href="/crowd-funding/{{_id}}" class="ui right floated primary button">
                 参与
                 <i class="right chevron icon"></i>
-              </div>
-              <div class="ui label">Limited</div>
+              </a>
+              {{#each tags}}
+              <div class="ui label">{{this}}</div>
+              {{/each}}
             </div>
           </div>
         </div>
       </div>
+      {{/each}}
     </div>
     <div class="six wide column">
-    <button class="positive ui button">发起募集</button>
     </div>
   </div>
 </template>

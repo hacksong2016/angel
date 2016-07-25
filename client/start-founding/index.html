@@ -33,12 +33,17 @@
         </div>
         <div class="field">
           <label>标签</label>
- 			<input type="text" name="f-tags" id="f-tags" placeholder="标签,请用半价逗号隔开">
+          <input type="text" name="f-tags" id="f-tags" placeholder="标签,请用半价逗号隔开">
         </div>
         <div class="field">
           <label>图片详情</label>
-          <input type="text" name="f-img" id="f-img" placeholder="图片详情">
+          <input type="file" name="f-img" id="fileupload">
         </div>
+        <div class="ui small images" id="files">
+          {{#each imgs}}
+          <img src={{this}} />
+          {{/each}}
+                    </div>
         <button class="ui primary button" type="submit">提交</button>
       </form>
     </div>

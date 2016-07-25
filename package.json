@@ -5,7 +5,9 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "aliyun-sdk": "^1.9.4",
     "autoprefixer": "^6.3.1",
+    "fibers": "^1.0.13",
     "meteor-node-stubs": "~0.2.0"
   },
   "postcss": {

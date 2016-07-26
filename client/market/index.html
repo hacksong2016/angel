@@ -1,69 +1,19 @@
 <template name="marketIndex">
-  <div class="ui container grid">
-    <div class="four wide column">
-      <div class="ui card ">
-        <a class="image" href="#">
-          <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
-        </a>
-        <div class="content">
-          <a class="header" href="#">Steve Jobes</a>
-          <div class="meta">
-            <a>Last Seen 2 days ago</a>
+  <div class="ui container grid stackable">
+    {{#each goods}}
+      <div class="four wide column">
+        <div class="ui card ">
+          <a class="image" href="/market/{{_id}}">
+            <img src="{{cover imgs}}">
+          </a>
+          <div class="content">
+            <a class="header" href="/market/{{_id}}">{{name}}</a>
+            <div class="meta">
+              <a>{{address}}</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="four wide column">
-      <div class="ui card ">
-        <a class="image" href="#">
-          <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
-        </a>
-        <div class="content">
-          <a class="header" href="#">Steve Jobes</a>
-          <div class="meta">
-            <a>Last Seen 2 days ago</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="four wide column">
-      <div class="ui card ">
-        <a class="image" href="#">
-          <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
-        </a>
-        <div class="content">
-          <a class="header" href="#">Steve Jobes</a>
-          <div class="meta">
-            <a>Last Seen 2 days ago</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="four wide column">
-      <div class="ui card ">
-        <a class="image" href="#">
-          <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
-        </a>
-        <div class="content">
-          <a class="header" href="#">Steve Jobes</a>
-          <div class="meta">
-            <a>Last Seen 2 days ago</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="four wide column">
-      <div class="ui card ">
-        <a class="image" href="#">
-          <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
-        </a>
-        <div class="content">
-          <a class="header" href="#">Steve Jobes</a>
-          <div class="meta">
-            <a>Last Seen 2 days ago</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    {{/each}}
   </div>
 </template>

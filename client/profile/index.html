@@ -1,4 +1,50 @@
 <template name="profileIndex">
-  
-
+  <div class="ui container gruid">
+    <h4 class="ui dividing header" style="padding-top:30px;">我的捐助</h4>
+    <div class="ui items">
+      {{#each contributes}}
+        <div class="item">
+          <div class="image">
+            <img src="{{cover imgs}}">
+          </div>
+          <div class="content">
+            <a class="header">{{name}}</a>
+            <div class="meta">
+              <span>{{detail}}</span>
+            </div>
+            <div class="description">
+              <p></p>
+            </div>
+            <div class="extra">
+              显示二维码
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="ui container gruid">
+    <h4 class="ui dividing header" style="padding-top:30px;">我参与的众筹</h4>
+    <div class="ui items">
+      {{#each donates}}
+        <div class="item">
+          <div class="image">
+            <img src="{{cover imgs}}">
+          </div>
+          <div class="content">
+            <a class="header">{{name}}</a>
+            <div class="meta">
+              <span>{{detail}}</span>
+            </div>
+            <div class="description">
+              <p></p>
+            </div>
+            <div class="extra">
+              显示二维码
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
 </template>

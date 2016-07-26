@@ -1,68 +1,65 @@
 <template name="siteIndex">
   <div class="ui grid container">
     <div class="ten wide column">
-      <h3 class="ui header">
-  进行中的捐助
-  <div class="sub header">帮助孩子们完成小愿望</div>
-  </h3>
+      <div id="allmap" class="map-view"></div>
     </div>
-    <div class="six wide column">
-      <h3 class="ui header">
-  捐助动态
-  <div class="sub header">让每一次捐助都能落实</div>
-  </h3>
-    </div>
-  </div>
-  <div class="ui grid container">
-    <div class="ten wide column">
-      {{#each founds}}
-        <div class="ui divided items">
-          <div class="item">
-            <div class="image">
-              <img src= {{img}}>
-            </div>
-            <div class="content">
-              <a class="header">{{title}}</a>
-              <div class="meta">
-                <span class="cinema">{{startTime}} - {{endTime}} 完成度：{{percent in amount}}%</span>
+    <div class="five wide column">
+      <div class="ui pointing secondary menu">
+        <a class="item active" data-tab="first"><i class="archive icon"></i>捐助</a>
+        <a class="item" data-tab="second"><i class="users icon"></i>众筹</a>
+        <a class="item" data-tab="third"><i class="announcement icon"></i>报告</a>
+        <a class="item" data-tab="fourth"><i class="shop icon"></i>集市</a>
+      </div>
+      <div class="ui tab active" data-tab="first">
+        <div class="ui list">
+          {{#each donates}}
+            <a class="item">
+              <i class="caret right icon"></i>
+              <div class="content">
+                <div class="header">{{name}}</div>
+                <div class="description">{{username}} 捐助 {{amount}} 件 {{name}}</div>
               </div>
-              <div class="description">
-                <p>{{detail}}
-                </p>
-              </div>
-              <div class="extra">
-                <a class="ui right floated primary button" href="/crowd-funding/{{_id}}">
-                参与
-                <i class="right chevron icon"></i>
-              </a>
-                {{#each tags}}
-                  <div class="ui label">{{this}}</div>
-                {{/each}}
-              </div>
-            </div>
-          </div>
+            </a>
+          {{/each}}
         </div>
-      {{/each}}
-    </div>
-    <div class="six wide column">
-      <div class="ui items">
-        <div class="item">
-          <div class="ui small image">
-            <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
-          </div>
-          <div class="middle aligned content">
-            <div class="header">
-              Content A
-            </div>
-            <div class="description">
-              <p>sadfadsfasdf</p>
-            </div>
-            <div class="extra">
-              <div class="ui right floated button">
-                Action
+      </div>
+      <div class="ui tab" data-tab="second">
+        <div class="ui list">
+          {{#each foundings}}
+            <a class="item">
+              <i class="caret right icon"></i>
+              <div class="content">
+                <div class="header">{{name}}</div>
+                <div class="description">{{username}} 发起了一次 为{{title}}的{{name}}的众筹</div>
               </div>
-            </div>
-          </div>
+            </a>
+          {{/each}}
+        </div>
+      </div>
+      <div class="ui tab" data-tab="third">
+        <div class="ui list">
+          {{#each reports}}
+            <a class="item">
+              <i class="caret right icon"></i>
+              <div class="content">
+                <div class="header">{{username}}</div>
+                <div class="description">确认了接收了货号为{{number}}的<a><b>{{amount}}件</b></a>{{name}}</div>
+              </div>
+            </a>
+          {{/each}}
+        </div>
+      </div>
+      <div class="ui tab" data-tab="fourth">
+        <div class="ui list">
+          {{#each contributes}}
+            <a class="item">
+              <i class="caret right icon"></i>
+              <div class="content">
+                <div class="header">{{name}}</div>
+                <div class="description">{{username}} 捐助了 {{amount}} 件 {{name}} 等待调拨</div>
+              </div>
+            </a>
+          {{/each}}
         </div>
       </div>
     </div>

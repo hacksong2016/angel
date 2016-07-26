@@ -1,31 +1,41 @@
 <template name="contributeIndex">
   <div class="ui grid container">
     <div class="eight wide column">
-      <form class="ui form">
+      <form class="ui form" id="contribute-form">
         <h4 class="ui dividing header">捐助信息填写</h4>
         <div class="field">
           <label>捐助人</label>
-          <input type="text" name="accept-unit" id="accept-unit" placeholder="接收单位名称">
+          <input type="text" name="c-username" id="c-username" placeholder="捐助人">
         </div>
         <div class="field">
           <label>取货地址</label>
-          <input type="text" name="accept-address" id="accept-address" placeholder="接收单位地址">
+          <input type="text" name="c-address" id="c-address" placeholder="取货地址">
         </div>
         <div class="field">
           <label>物资名称</label>
-          <input type="text" name="accept-name" id="accept-name" placeholder="接收物资名称">
+          <input type="text" name="c-name" id="c-name" placeholder="物资名称">
         </div>
         <div class="field">
           <label>物资数量</label>
-          <input type="number" name="accept-amount" id="accept-amount" placeholder="物资数量">
+          <input type="number" name="c-amount" id="c-amount" placeholder="物资数量">
         </div>
         <div class="field">
           <label>捐助时间</label>
-          <input type="date" name="accept-time" id="accept-time" placeholder="接受捐助时间">
+          <input type="date" name="c-time" id="c-time" placeholder="捐助时间">
         </div>
         <div class="field">
           <label>捐助详情</label>
-          <textarea id="accept-detail"></textarea>
+          <textarea id="c-detail"></textarea>
+        </div>
+        <div class="field">
+          <label>图片详情</label>
+          <input type="file" id="fileupload" />
+        </div>
+        <div class="ui small images">
+          {{#each imgs}}
+          <img src={{this}} />
+          {{/each}}
+        
         </div>
         <button class="ui primary button" type="submit">提交</button>
       </form>

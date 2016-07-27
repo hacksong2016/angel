@@ -2,6 +2,11 @@
 
 http://angel.hackthon.fami2x.com/crowd-funding/MgKnX3HA5gbTTzczR
 
+## todo
+
+[ ] 视频直播
+
+
 ### 概述
 
 信息公开透明，资源合理利用，社会可全员参与的公益平台。
